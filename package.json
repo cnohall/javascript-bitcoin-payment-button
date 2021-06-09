@@ -1,0 +1,51 @@
+{
+  "name": "javascript-bitcoin-payment-button",
+  "version": "0.1.0",
+  "description": "Receive Bitcoin Payments on your website through the [Blockonomics](https://www.blockonomics.co/) Payment Button",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnohall/javascript-bitcoin-payment-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cnohall/javascript-bitcoin-payment-button/issues"
+  },
+  "homepage": "https://github.com/cnohall/javascript-bitcoin-payment-button#readme",
+  "main": "lib/index.js",
+  "browser": "lib/index.umd.js",
+  "module": "lib/index.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "styleguidist server",
+    "build": "rollup -c",
+    "prepublishOnly": "rm -rf lib && npm run build",
+    "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
+  },
+  "keywords": [
+    "Blockonomics",
+    "Bitcoin",
+    "Javascript",
+    "Payment",
+    "Button"
+  ],
+  "author": "cnohall",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "rollup": "^2.51.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-uglify": "^6.0.4",
+    "webpack": "^5.38.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "terser": "^5.7.0"
+  },
+  "dependencies": {
+    "postscribe": "^2.0.8"
+  }
+}
